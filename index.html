@@ -17,12 +17,19 @@
 
         .text {
             font-family: 'Arial', sans-serif;
-            font-size: 60px;
+            font-size: 10vw; /* 适配所有屏幕：字体为视口宽度的10% */
             color: #fff;
-            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff,
-                         0 0 40px #ff00de, 0 0 70px #ff00de,
-                         0 0 80px #ff00de, 0 0 100px #ff00de,
-                         0 0 150px #ff00de;
+            text-align: center;
+            padding: 0 20px;
+            text-shadow:
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 30px #fff,
+                0 0 40px #ff00de,
+                0 0 70px #ff00de,
+                0 0 80px #ff00de,
+                0 0 100px #ff00de,
+                0 0 150px #ff00de;
             animation: fadeOut 5s forwards;
         }
 
@@ -34,6 +41,13 @@
             100% {
                 opacity: 0;
                 transform: scale(1.2);
+            }
+        }
+
+        /* 可选：更精确地控制移动端字体大小 */
+        @media (max-width: 480px) {
+            .text {
+                font-size: 8vw;
             }
         }
     </style>
