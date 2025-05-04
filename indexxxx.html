@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云起千山，风归万里</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        .text {
+            font-family: 'Arial', sans-serif;
+            font-size: 10vw; /* 适配所有屏幕：字体为视口宽度的10% */
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+            text-shadow:
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 30px #fff,
+                0 0 40px #ff00de,
+                0 0 70px #ff00de,
+                0 0 80px #ff00de,
+                0 0 100px #ff00de,
+                0 0 150px #ff00de;
+            animation: fadeOut 5s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1.2);
+            }
+        }
+
+        /* 可选：更精确地控制移动端字体大小 */
+        @media (max-width: 480px) {
+            .text {
+                font-size: 8vw;
+            }
+        }
+    </style>
+    <script>
+        // 5秒后跳转到 Lana Del Rey 的 Apple Music 页面
+        setTimeout(() => {
+            window.location.href = "https://music.apple.com/artist/lana-del-rey/464296584";
+        }, 5000);
+    </script>
+</head>
+<body>
+    <div class="text">云起千山，风归万里</div>
+</body>
+</html>
